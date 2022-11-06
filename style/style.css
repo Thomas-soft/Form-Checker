@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: whitesmoke;
+}
+
+body {
+  background-color: #222;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+  margin: 5px 0;
+}
+
+button {
+  background: -webkit-gradient(linear, right top, left top, from(rgb(4, 196, 255)), to(rgb(0, 255, 136)));
+  background: -o-linear-gradient(right, rgb(4, 196, 255), rgb(0, 255, 136));
+  background: linear-gradient(to left, rgb(4, 196, 255), rgb(0, 255, 136));
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  color: #222;
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 5px 20px;
+  border: 2px solid rgb(4, 196, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+button:hover {
+  border-radius: 15px;
+  letter-spacing: 1px;
+}
+
+#bar {
+  height: 5px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.bar-normal {
+  width: 0%;
+}
+
+.bar-low {
+  width: 20%;
+  background-color: red;
+}
+
+.bar-medium {
+  width: 50%;
+  background-color: yellow;
+}
+
+.bar-up {
+  width: 100%;
+  background-color: rgb(43, 255, 0);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 40px auto;
+}
+.container .contain {
+  position: relative;
+  background-color: #333;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+}
+.container .contain .img-content {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, right top, left top, from(rgb(4, 196, 255)), to(rgb(0, 255, 136)));
+  background: -o-linear-gradient(right, rgb(4, 196, 255), rgb(0, 255, 136));
+  background: linear-gradient(to left, rgb(4, 196, 255), rgb(0, 255, 136));
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.container .contain form {
+  margin: 80px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+}
+.container .contain form .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5px auto;
+  width: 80%;
+}
+.container .contain form .content label {
+  font-size: 1.2rem;
+}
+.container .contain form .content input {
+  outline: none;
+  border: 2px solid rgb(4, 196, 255);
+  border-radius: 8px;
+  background-color: #444;
+  padding: 5px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.container .contain form .content input:focus {
+  border-radius: 10px;
+  border-color: rgb(0, 255, 136);
+}
+.container .contain form .content .error {
+  color: rgb(223, 56, 83);
+  font-size: 0.8rem;
+}
+.container .contain form .button-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}/*# sourceMappingURL=style.css.map */
