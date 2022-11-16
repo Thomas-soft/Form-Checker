@@ -11,9 +11,9 @@ inputs.forEach(input =>
     {
         if (e.target.id === "name_input")
         {
-            if (input.value.length < 3 || input.value.length > 20)
+            if (input.value.length > 0 && (input.value.length < 3 || input.value.length > 20 || !input.value.match(/^[éèâïùça-zA-Z0-9\_-]+$/)))
             {
-                name_error.textContent = "Votre pseudo doit contenir entre 3 et 20 caractères.";
+                name_error.textContent = "Votre pseudo doit contenir entre 3 et 20 caractères et pas de caractères spéciales.";
                 good[0] = false;
             }
             else
