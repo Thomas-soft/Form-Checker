@@ -13,26 +13,30 @@ inputs.forEach(input =>
         {
             if (input.value.length > 0 && (input.value.length < 3 || input.value.length > 20 || !input.value.match(/^[éèâïùça-zA-Z0-9\_-]+$/)))
             {
-                name_error.textContent = "Votre pseudo doit contenir entre 3 et 20 caractères et pas de caractères spéciales.";
+                name_error.style.visibility = "visible";
                 good[0] = false;
+                name_input.style.color = "red";
             }
             else
             {
-                name_error.textContent = "";
+                name_error.style.visibility = "hidden";
                 good[0] = true;
+                name_input.style.color = "white";
             }
         }
         if (e.target.id === "email_input")
         {
-            if (email_input.value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,4}$/i))
+            if (email_input.value.length > 0 && !email_input.value.match(/^[\w._-]+@[\w-]+\.[a-z]{2,4}$/i))
             {
-                email_error.textContent = "";
-                good[1] = true;
+                email_error.style.visibility = "visible";
+                good[1] = false;
+                email_input.style.color = "red";
             }
             else
             {
-                email_error.textContent = "Email invalide.";
-                good[1] = false;
+                email_error.style.visibility = "hidden";
+                good[1] = true;
+                email_input.style.color = "white";
             }
         }
         if (e.target.id === "password_input")
@@ -54,28 +58,32 @@ inputs.forEach(input =>
             {
                 bar.classList.add("bar-up");
             }
-            if (input.value.match(/^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[\W])(?=.*?[\d])/) && input.value.length >= 8)
+            if (input.value.length > 0 && (!input.value.match(/^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[\W])(?=.*?[\d])/) && input.value.length <= 8))
             {
-                password_error.textContent = "";
-                good[2] = true;
+                password_error.style.visibility = "visible";
+                good[2] = false;
+                password_input.style.color = "red";
             }
             else
             {
-                password_error.textContent = "Minimum de 8 caractères, une majuscule et un caractère spécial.";
-                good[2] = false;
+                password_error.style.visibility = "hidden";
+                good[2] = true;
+                password_input.style.color = "white";
             }
         }
         if (e.target.id === "cPassword_input")
         {
             if (password_input.value === input.value)
             {
-                cPassword_error.textContent = "";
+                cPassword_error.style.visibility = "hidden";
                 good[3] = true;
+                cPassword_input.style.color = "white";
             }
             else
             {
-                cPassword_error.textContent = "Le mot de passe n'est pas le même.";
+                cPassword_error.style.visibility = "visible";
                 good[3] = false;
+                cPassword_input.style.color = "red";
             }
         }
     });

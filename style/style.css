@@ -135,6 +135,7 @@ button:hover {
 .container .contain form .content .error {
   color: rgb(223, 56, 83);
   font-size: 0.8rem;
+  visibility: hidden;
 }
 .container .contain form .button-content {
   display: -webkit-box;
